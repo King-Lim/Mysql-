@@ -1,2 +1,65 @@
 First day，First SQL
     
+SELECT * FROM sheet1;
+SELECT * FROM sheet2;
+SELECT * FROM sheet1 WHERE SXJBH='690291013';
+SELECT JKBW,FL from	sheet1;	
+
+SELECT * FROM sheet1 WHERE FL='入口' AND XJ='-212';
+
+INSERT INTO sheet1 VALUES ('上海东滩湿地公园','690298888','花博大道/陈海H','出口','正常');
+#UPDATE用来更新表中已有的数据
+#UPDATE sheet1 SET FL='出口',XJ='-212' WHERE SXJBH='690291013';
+SELECT * from sheet1 LIMIT 20;
+#插入递增的列
+SELECT * FROM sheet1 WHERE SXJBH BETWEEN 690293004 AND 690293010;
+
+SELECT * FROM sheet1;
+#INNER JOIN与JION是相通的
+#INNER JOIN 关键字在表中存在至少一个匹配时返回行
+SELECT * FROM sheet1 JOIN sheet2 ON sheet1.SXJBH=sheet2.JPBH;
+#LEFT JOIN关键字从左表返回所有行，即使右表中没有匹配
+#如果右表中没有匹配，结果返回null
+SELECT * FROM sheet1 LEFT JOIN sheet2 ON sheet1.SXJBH=sheet2.JPBH;
+#RIGHT JOIN关键字从右表返回所有行，即使左表中没有匹配
+#如果左表中没有匹配，结果返回null
+SELECT * FROM sheet1 RIGHT JOIN sheet2 ON sheet1.SXJBH=sheet2.JPBH;
+SELECT SXJBH FROM sheet1 UNION ALL SELECT JPBH FROM sheet2;
+
+#SELECT INTO 语句从一个表复制数据，把数据插入到新表中；
+SELECT * INTO sheet10701 FROM sheet1;
+
+INSERT INTO sheet2 SELECT * FROM sheet1;
+
+DELETE FROM sheet2 WHERE ID='上海东滩湿地公园';
+DROP TABLE persons;
+
+CREATE TABLE Persons
+(
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+);
+
+CREATE TABLE Persons
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+PRIMARY KEY (P_Id)
+);
+
+CREATE TABLE Persons 
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+CONSTRAINT pk_PersonID PRIMARY KEY (P_Id,LastName)
+);
+
