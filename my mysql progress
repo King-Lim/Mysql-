@@ -87,3 +87,10 @@ Second Days,Learning about mysql basic knowledge
     关系型数据库通过外键来实现一对多、多对多和一对一的关系；
     外键可以通过数据库来约束，也可不设置约束，仅通过应用程序的逻辑来保证；
 复合键：将多个列作为一个索引键，多用于复合索引；
+
+
+Third day,Mysql trainning
+
+SELECT * FROM employees ORDER BY hire_date DESC LIMIT 3,2
+#对hire_date降序排序，并选取第四行的后两行
+
