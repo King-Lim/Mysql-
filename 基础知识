@@ -22,3 +22,9 @@
     校验集：collation
       例：create database test character set utf8 collate utf8_general_ci;
   *创建表格      
+    创建表格时，语句中相关表名、字段等信息，须使用反单引号（``）；
+    创建表格，即为创建表结构，对每个字段需要定义类型；
+    需要指定主键，可以设置自增主键primary key（`主键名`）；
+  *插入数据
+    如果不用程序，插入多条数据可直接与Excel搭配使用，直接新增；
+    通过代码实现数据插入；
