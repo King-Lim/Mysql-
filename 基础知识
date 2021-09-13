@@ -12,4 +12,13 @@
     show databases；
   *切换数据库
     use 数据库名；
-  
+  *显示数据库里面的表格
+    show tables；
+  *显示某个表格的内容
+    desc 表格名；
+  *创建mysql数据库时有三个参数可以设置
+    数据库名：database name
+    字符设置：character set
+    校验集：collation
+      例：create database test character set utf8 collate utf8_general_ci;
+  *      
