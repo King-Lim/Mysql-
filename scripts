@@ -1,1 +1,14 @@
+#!/bin/bash
+#name:		mysql_back
+#auther:	Lzy
+#version:	v2.0
 
+DIR="/data/backup/mysql/"
+file="$DIR`date +%Y%m%d`_healthCode.sql"
+mysqldump -uroot -p'2019IVAmysqlP@ssword' healthCode > $file
+
+echo "### backup success at `date +%Y%m%d`"
+
+find $DIR -mtime +7 -name '*.sql' -exec rm -f {} \;
+
+echo "### history_data delete success"
