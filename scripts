@@ -1,3 +1,4 @@
+-----------MYSQL数据库备份脚本----------------------
 #!/bin/bash
 #name:		mysql_back
 #auther:	Lzy
